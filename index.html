@@ -15,82 +15,125 @@
     <header>
         <div class="containeur">
             <div class="logo"><span>BE</span>MOVIES</div>
-                <ul>
-                    <li>SEARCH</li>
-                    <li>LATESET</li>
-                    <li>GENRES</li>
-                    <li>REGISTER</li>
-                    <li>SIGNIN</li>
-                </ul>
-            </div>
-        </header>
-    <main>
-        <div class="search">
-            <input type="text" placeholder="movie type"  id="movieInput">
-            <button id="search">→</button>
-        </div>
-    </main>
-    
-
-
-    
-    <!-- Slider main container -->
-<div class="swiper">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide"></div>
-    <div class="swiper-slide"></div>
-    <div class="swiper-slide"></div>
-    ...
-    </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
-
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-</div>
-
-
-
-    <!-- Slider main container -->
-<div class="swiper">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide"></div>
-    <div class="swiper-slide"></div>
-    <div class="swiper-slide"></div>
-    ...
-    </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
-    
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-</div>
-    
-
-
-
-
-
-
-<footer>
-    <div class="containeur">
-        <div class="logo"><span>BE</span>MOVIES</div>
             <ul>
-                <li>SEARCH</li>
-                <li>LATESET</li>
-                <li>GENRES</li>
-                <li>REGISTER</li>
-                <li>SIGNIN</li>
+                <li><a href="#SEARCH">SEARCH</a></li>
+                <li><a href="#LATEST">LATEST</a></li>
+                <li><a href="#GENRES">GENRES</a></li>
+                <li><a href="#" id="register-link">REGISTER</a></li> <!-- Lien pour afficher la popup -->
+                <li><a href="#SIGNIN">SIGNIN</a></li>
             </ul>
-        <div class="copyright">@2023 - All rights reserved</div>
         </div>
-</footer>
+    </header>
+
+    <section id="SEARCH">
+        <main>
+            <div class="search">
+                <input type="text" placeholder="movie type" id="movieInput">
+                <button id="search">→</button>
+            </div>
+            
+        </main>
+    </section>
+
+    <div class="swiper-top">
+        
+        <div class="swiper-wrapper">
+            
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+        </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+    </div>
+
+    <section id="LATEST">
+        <div class="title Lat">Latest releases</div>
+        <div class="swiper">
+            <div class="swiper-wrapper" id="latest-movie-list">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+    <div class="containeur-genre">
+        <div class="movies-genre">
+            <p>Movies by genre</p>
+        </div>
+        <div>
+            <ul>
+                <li><button class="genre" data-genre="35">Drama</button></li>
+                <li><button class="genre" data-genre="28">Comedy</button></li>
+                <li><button class="genre" data-genre="18">Action</button></li>
+                <li><button class="genre" data-genre="10749">Romance</button></li>
+                <li><button class="genre" data-genre="12">Fantasy</button></li>
+                <li><button class="genre" data-genre="16">Animation</button></li>
+            </ul>
+        </div>
+        <div class="ligne"></div>
+
+
+        
+    </div>
+    
+    <section id="GENRES">
+        <div class="swiper genre-swiper">
+            <div class="swiper-wrapper" id="movies-container">
+                <!-- Les films générés iront ici -->
+            </div>
+            
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        
+    </section>
+
+    <footer>
+        <div class="containeur">
+            <div class="logo"><span>BE</span>MOVIES</div>
+            <ul>
+                <li><a href="#SEARCH">SEARCH</a></li>
+                <li><a href="#LATEST">LATEST</a></li>
+                <li><a href="#GENRES">GENRES</a></li>
+                <li><a href="#" id="register-link">REGISTER</a></li> <!-- Lien pour afficher la popup -->
+                <li><a href="#SIGNIN">SIGNIN</a></li>
+            </ul>
+            <div class="copyright">@2023 - All rights reserved</div>
+        </div>
+    </footer>
+
+    <!-- Popup Section (cachée initialement) -->
+    <section id="REGISTER">
+        <div class="container-register">
+            <div class="container">
+                <button class="close-btn">X</button>
+                <div class="button-container">
+                    <button class="signup-btn">Signup</button>
+                    <button class="login-btn">Login</button>
+                </div>
+                <form class="login-form">
+                    <input type="text" id="username" placeholder="Username">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Remember Me</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+                <div class="footer-links">
+                    <a href="#" class="forgot-password">I forgot my password</a>
+                    <p>Not a member yet? <a href="#" class="sign-up">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
